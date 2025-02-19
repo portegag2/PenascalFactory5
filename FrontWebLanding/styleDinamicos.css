@@ -1,13 +1,13 @@
 .product {
     /** ANIMACION */
     opacity: 0;
-    animation: slideIn 2s ease-out forwards;
+    animation: slideIn 3s ease-out forwards;
   }
 
 @keyframes slideIn {
     from {
       opacity: 0;
-      transform: translateX(-50px);
+      transform: translateX(-100px);
     }
     to {
       opacity: 1;
