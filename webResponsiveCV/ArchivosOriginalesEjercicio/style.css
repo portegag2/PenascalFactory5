@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font: 16px Helvetica, Sans-Serif;
+  line-height: 24px;
+  width: 800px;
+  margin: 40px auto 60px;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 1rem;
+}
+
+#pic {
+  width: 200px;
+  height: 250px;
+  border: 1px solid #999;
+  padding: 1rem;
+}

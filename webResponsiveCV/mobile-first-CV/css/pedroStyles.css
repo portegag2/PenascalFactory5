@@ -1,0 +1,67 @@
+.mb-0{ 
+    display: none;
+}
+@media (min-width: 992px) {
+    .mb-0{
+        display:inline-block
+    }
+  }
+
+.subheading{ 
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .subheading{
+        display:block;
+    }
+  }
+
+.imagen-perfil{ 
+    display: inline-block;
+}
+@media (min-width: 992px) {
+    .imagen-perfil{
+        display:none;
+    }
+  }
+
+
+ footer {
+    display: block; /* Oculta el footer por defecto */
+    background-color: var(--bs-primary);    
+    padding: 10px 0;
+    position: fixed; /* Fija el footer en la parte inferior */
+    left: 0;
+    right: 0;
+    bottom: 0; /* Asegura que esté en la parte inferior */
+}
+
+
+
+@media (min-width: 992px) {
+    footer{
+        display:none;
+    }
+  }
+
+  @media (max-width: 992px) {
+    section#about .social-icons {
+      display: none;
+    }
+  }
+/** Para que esten aliniados a la derecha la llamada y el mail*/
+  .social-icons {
+    display: flex; /* Activar Flexbox */
+    align-items: center; /* Centrar verticalmente los iconos */
+  }
+
+  /* Eliminar el margen derecho del último icono */
+    .social-icons .social-icon:last-child {
+    margin-right: 0;
+  }
+  
+  /* Empujar los dos últimos iconos a la derecha */
+  .social-icons .social-icon:nth-last-child(2) {
+    margin-left: auto; /* Empuja este icono y los siguientes a la derecha */
+  }

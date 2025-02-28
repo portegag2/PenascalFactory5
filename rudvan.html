@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de DOM</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>¡Manipulación del DOM!</h1>
+  <p>Haz clic en el botón para cambiar el color de fondo.</p>
+  <button id="cambiarColor">Cambiar color</button>
+ 
+
+
+        <!-- Contador de clics -->
+
+        <p id="contador">Número de clics: 0</p>
+ 
+
+
+
+        <!-- Resetear color -->
+
+        <button id="resetearColor">Resetear color</button>
+
+
+ <script>
+
+    const colores = ["#FF5733", "#33FF57", "#3357FF", "#F333FF", "#33FFF5"];  // Array de colores
+
+
+    const boton = document.getElementById("cambiarColor");   // Seleccionar el botón
+    boton.addEventListener("click", function() {   // Añadir un evento al botón
+
+    const indice = Math.floor(Math.random() * colores.length);   // Generar un índice aleatorio
+    document.body.style.backgroundColor = colores[indice]; // Cambiar el color de fondo
+    });
+
+        // Cambiar el color del texto
+
+              const titulo = document.querySelector('h1');
+              titulo.style.color = 'red';  // Cambia el color del texto a rojo
+
+// Agregar contador de clicks
+
+
+             let contador = 0; // Inicializamos el contador
+             const contadorElemento = document.getElementById('contador');
+
+             boton.addEventListener("click", function() {
+             const indice = Math.floor(Math.random() * colores.length);
+             document.body.style.backgroundColor = colores[indice];
+
+             contador++;
+             contadorElemento.textContent = 'Número de clics:'+ contador; // Actualizamos el texto
+             });
+
+
+
+
+
+
+       //Resetear color
+
+             const botonReset = document.getElementById('resetearColor');
+
+             botonReset.addEventListener("click", function() {
+             document.body.style.backgroundColor = ""; // Vuelve al color original
+             contador = 0;
+             contadorElemento.textContent = 'Número de clics:'+ contador; // Actualizamos el texto
+             });
+
+
+
+
+
+
+    // ¿Qué otros eventos puedo usar además de "click"?
+
+            // Cuando el cursor pasa sobre un elemento.
+
+                // boton.addEventListener("mouseover", function() {
+                // console.log("¡El cursor está sobre el botón!");
+                // });
+
+
+            // Cuando se presiona una tecla
+
+                // document.addEventListener("keydown", function(event) {
+                // console.log(Tecla presionada: ${event.key});
+                // });
+
+
+
+
+            // Cuando la página ha terminado de cargar.
+
+                // window.addEventListener("load", function() {
+                // console.log("¡La página ha cargado!");
+                // });
+
+
+
+            // Cuando el valor de un campo de formulario cambia.
+
+                // const input = document.querySelector('input');
+                // input.addEventListener("change", function() {
+                // console.log("El valor del campo ha cambiado.");
+                // });
+
+
+  </script>
+
+</body>
+</html>
