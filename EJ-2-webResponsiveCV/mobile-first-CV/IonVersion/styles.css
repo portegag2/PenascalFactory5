@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+}
+
+header {
+    background: #1a1a1a;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+}
+
+.menu-btn {
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.profile {
+    position: relative;
+    text-align: center;
+    padding: 0;
+}
+
+.profile img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Ajustar el texto sobre la imagen */
+.profile h2,
+.profile p {
+    position: absolute;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+}
+.profile h2 {
+    top: 20px;
+    font-size: 22px;
+}
+
+.profile p {
+    top: 50px;
+    font-size: 16px;
+}
+
+/* Ajuste de botones */
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.info button {
+    width: 80%;
+    background: white;
+    color: black;
+    border: 1px solid black;
+    padding: 12px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Footer */
+footer {
+    background: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
+
+@media (min-width: 600px) {
+    .container {
+        max-width: 500px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 600px;
+    }
+
+    .info {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .info button {
+        flex: 1;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 700px;
+    }
+
+    .profile img {
+        width: 80%;
+    }
+}
