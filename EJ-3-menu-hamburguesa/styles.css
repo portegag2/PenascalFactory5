@@ -1,0 +1,84 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Estilos del header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f4f4f4;
+}
+
+/* Logo */
+.logo {
+    font-weight: bold;
+}
+
+/* Menú de escritorio */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Ocultar el checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Icono de menú hamburguesa */
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f4f4f4;
+    margin-top: auto;
+}
+
+/* Diseño responsive */
+@media (max-width: 768px) {
+    /* Esconder el menú por defecto */
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: white;
+        width: 150px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Mostrar el icono de hamburguesa */
+    .hamburger {
+        display: block;
+    }
+
+    /* Cuando el checkbox está marcado, mostrar el menú */
+    #menu-toggle:checked + .hamburger + nav .menu {
+        display: flex;
+    }
+}
