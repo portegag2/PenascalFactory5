@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Evento Change</title>
+</head>
+<body>
+
+    <h2>Elige tu color favorito:</h2>
+    <select id="colorSelector">
+        <option value="rojo">Rojo</option>
+        <option value="azul">Azul</option>
+        <option value="verde">Verde</option>
+        <option value="amarillo">Amarillo</option>
+    </select>
+
+    <p id="mensaje"></p>
+
+    <script>
+        // Seleccionamos el elemento <select> con id 'colorSelector'
+        const colorSelector = document.getElementById('colorSelector');
+        const mensaje = document.getElementById('mensaje');
+        
+        // Añadimos un "escuchador" para el evento 'change'
+        document.getElementById('colorSelector').addEventListener('change', function() {
+            // Obtenemos el valor seleccionado
+            const colorSeleccionado = this.value;
+            
+            // Mostramos un mensaje según el color seleccionado
+            mensaje.textContent = 'Has seleccionado el color: ' + colorSeleccionado;
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #acca85;
+    margin: 0;
+}
+
+.satisfaction-form {
+    width: 90%;
+    max-width: 480px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+label, input {
+    display: inline-block;
+    margin: 5px;
+  }
+
+label {
+    font-weight: bold;
+}
+
+input {
+    width: 200px;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+input:invalid {
+    border-color: red;
+}
+
+input:valid {
+    border-color: green;
+}
+
+input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+input:required {
+    border: 1px solid #ccc; /* Borde gris normal */
+}
+
+/* Solo muestra error si el usuario ha interactuado */
+input:required:focus:invalid, input:required.user-touched:invalid {
+    border-color: red;
+}
+
+input:required:valid {
+    border-color: green;
+}
+
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .submit {
+    background-color: #28a745;
+    color: white;
+  }
+
+  .submit:hover {
+    background-color: #218838;
+  }
+
+  .reset {
+    background-color: #dc3545;
+    color: white;
+    margin-left: 10px;
+  }
+
+  .reset:hover {
+    background-color: #c82333;
+  }
+
+
+  @media (max-width: 600px) {
+    label, input {
+      display: block;
+      width: 100%;
+    }
+
+    input {
+      margin-top: 10px;
+    }
+    .button-container {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        align-items: center; /* Centra los botones */
+      }
+  
+      .btn {
+        width: 100%; /* Los botones ocupan todo el ancho */
+        margin: 5px 0; /* Ajusta el margen */
+      }
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  /** Rango **/
+  .rating-container {
+    text-align: center;
+    margin: 20px;
+}
+
+.rating-range {
+    -webkit-appearance: none; /* Elimina el estilo predeterminado en WebKit */
+    width: 100%; /* Ancho completo */
+    height: 10px; /* Altura de la barra */
+    background: #ddd; /* Color de fondo */
+    border-radius: 5px; /* Bordes redondeados */
+    outline: none; /* Sin contorno */
+}
+
+.rating-range::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Elimina el estilo predeterminado en WebKit */
+    appearance: none; /* Elimina el estilo predeterminado */
+    width: 20px; /* Ancho del pulgar */
+    height: 20px; /* Altura del pulgar */
+    border-radius: 50%; /* Pulgar redondeado */
+    background: #4CAF50; /* Color del pulgar */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el pulgar */
+}
+
+.rating-range::-moz-range-thumb {
+    width: 20px; /* Ancho del pulgar */
+    height: 20px; /* Altura del pulgar */
+    border-radius: 50%; /* Pulgar redondeado */
+    background: #4CAF50; /* Color del pulgar */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el pulgar */
+}
+
+.rating-value {
+    margin-top: 10px; /* Espacio entre la barra y el valor */
+    font-size: 24px; /* Tamaño de la fuente */
+}
+
+
+
